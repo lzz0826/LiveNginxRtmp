@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>LiveNginxRtmp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>PullStreaming</module>
+    <module>PushStreaming</module>
+    <module>Common</module>
+  </modules>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.9.RELEASE</version>
+    <relativePath/>
+  </parent>
+
+  <!-- 定義專案的打包類型，這裡設置為 pom 表示這是一個父專案 -->
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- 定義 Maven 編譯器的源碼版本 -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <!-- 定義 Maven 編譯器的目標版本 -->
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+
+  <dependencyManagement>
+    <dependencies>
+      <!--直播相关依赖-->
+      <!--javacv-->
+      <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>javacv-platform</artifactId>
+        <version>1.5.9</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv-platform -->
+      <!--opencv-->
+      <dependency>
+        <groupId>org.bytedeco.javacpp-presets</groupId>
+        <artifactId>opencv-platform</artifactId>
+        <version>4.0.1-1.4.4</version>
+      </dependency>
+
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.22</version>
+        <scope>provided</scope>
+      </dependency>
+
+      <!--註解驗證-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-validation</artifactId>
+        <version>3.1.2</version>
+      </dependency>
+
+
+      <!--  StringUtil    -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.12.0</version>
+      </dependency>
+
+    </dependencies>
+
+
+
+
+  </dependencyManagement>
+
+
+
+
+  <build>
+    <!-- 定義最終生成文件的名稱 -->
+    <finalName>EventualConsistency</finalName>
+
+    <!-- 資源文件處理配置 -->
+    <resources>
+      <!-- 指定資源文件目錄以及是否啟用過濾器 -->
+      <resource>
+        <directory>src/main/resources</directory> <!-- 資源文件目錄 -->
+        <filtering>true</filtering> <!-- 是否啟用過濾器 -->
+      </resource>
+    </resources>
+
+    <!-- Maven 資源插件配置 -->
+    <plugins>
+      <!-- 定義 Maven 資源插件 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <!-- 使用  resources-plugin 插件-->
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <!-- 定義過濾器分隔符 -->
+          <delimiters>
+            <delimiter>$</delimiter>
+          </delimiters>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

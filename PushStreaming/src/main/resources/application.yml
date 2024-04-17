@@ -1,0 +1,16 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /
+
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 300MB #大小不超过 300MB
+      max-request-size: 350MB #整个请求的大小不超过 350MB。
+
+#檔案上傳路徑
+tmp:
+  upload:
+    file-path: ./uploadTmp #會與當前為服務同一層 相對路徑
