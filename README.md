@@ -2,7 +2,7 @@
 
 # 基於Nginx 推拉流服務實現直播
 <br />
-![image](https://github.com/lzz0826/GO-AdminPro/blob/main/img/005.png)
+  
 
 ![image](https://raw.githubusercontent.com/lzz0826/LiveNginxRtmp/main/img/m2.png)
 
