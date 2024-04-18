@@ -33,11 +33,11 @@ public class PushController {
 
 
     /**
-     * 創建MAP推流(MP4暫時存本地)
+     * 創建MP4推流(MP4暫時存本地)(上播)
      * streamName = userId + username
      */
     @GetMapping("/createPushRtmpMp4")
-    public BaseResp<String> createPushRtmpMp4(@RequestBody @Valid CreatePushRtmpMp4Req req) throws Exception {
+    public BaseResp<String> createPushRtmpMp4(@RequestBody @Valid CreatePushRtmpMp4Req req) {
 
         String userId = req.getUserId();
         String username = req.getUsername();
@@ -91,7 +91,10 @@ public class PushController {
         return BaseResp.ok(getRtmpMap(streamName));
     }
 
-
+    /**
+     * 移除推流碼(下播)
+     * streamName = userId + username
+     */
     @GetMapping("/removeRtmp")
     public BaseResp<String> removeRtmp(@RequestBody @Valid RemoveRtmp req){
 
