@@ -18,6 +18,11 @@ public enum StatusCode {
      */
     CreatePushMp4Error(100, "创建推流MP4失败"),
 
+    RtmpUrlIsNotExist(102, "推流碼不存在"),
+
+    RtmpUrlIsExist(103, "推流碼已存在"),
+
+
     /**
      * 檔案 400
      */

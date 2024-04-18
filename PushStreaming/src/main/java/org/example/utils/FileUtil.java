@@ -54,7 +54,7 @@ public class FileUtil {
      * 查该路迳是否有该档案
      */
 
-    public static boolean CheckFilePath(String filePath) {
+    public static boolean checkFilePath(String filePath) {
         File file = new File(filePath);
         if (file.exists()) {
             return true;

@@ -10,10 +10,7 @@ import org.bytedeco.javacv.FFmpegFrameGrabber;
 import org.bytedeco.javacv.FFmpegFrameRecorder;
 import org.bytedeco.javacv.FFmpegLogCallback;
 import org.bytedeco.javacv.Frame;
-import org.example.exception.FilePathNotFundException;
 import org.springframework.stereotype.Service;
-
-import static org.example.utils.FileUtil.CheckFilePath;
 
 /**
  * @description 读取指定的mp4文件，推送到SRS服务器

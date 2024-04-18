@@ -35,7 +35,7 @@ public class CreatePushRtmpMp4Req {
     @NotNull(message = "fileMd5不能为空")
     private String fileMd5;
 
-    //自代参数
+    //自帶参数
     private HashMap<String, String> parameters;
 
 
