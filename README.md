@@ -1,7 +1,9 @@
 # LiveNginxRtmp
 
 # 基於Nginx 推拉流服務實現直播
-
+<br />
+![image](https://raw.githubusercontent.com/lzz0826/LiveNginxRtmp/main/img/m2.png)
+圖片來源:https://github.com/twtrubiks/nginx-rtmp-tutorial
 <br />
 ## 運行項目:
 * 需要先安裝 docker-compose<br />
