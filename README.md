@@ -23,6 +23,10 @@ docker network create --subnet=192.168.200.0/24 redis-cluster-net<br />
 - 攝像頭直播(未完成)<br />
 
 
+![image](https://raw.githubusercontent.com/lzz0826/LiveNginxRtmp/main/img/m1.jpg)
+
+圖片來源:https://github.com/twtrubiks/nginx-rtmp-tutorial
+
 
 
 
