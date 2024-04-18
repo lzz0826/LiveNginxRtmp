@@ -6,6 +6,7 @@ import org.example.common.BaseResp;
 import org.example.common.StatusCode;
 import org.example.controller.req.CreatePushRtmpMp4Req;
 import org.example.controller.req.GetPushRtmpReq;
+import org.example.controller.req.RemoveRtmp;
 import org.example.enums.NginxRtmpEnum;
 import org.example.enums.UploadType;
 import org.example.service.PathService;
@@ -88,6 +89,18 @@ public class PushController {
             return BaseResp.fail(StatusCode.RtmpUrlIsNotExist);
         }
         return BaseResp.ok(getRtmpMap(streamName));
+    }
+
+
+    @GetMapping("/removeRtmp")
+    public BaseResp<String> removeRtmp(@RequestBody @Valid RemoveRtmp req){
+
+        String userId = req.getUserId();
+        String username = req.getUsername();
+        String streamName = userId+username;
+        removeRtmpMap(streamName);
+
+        return BaseResp.ok(StatusCode.Success);
     }
 
 
