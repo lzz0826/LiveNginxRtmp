@@ -17,11 +17,15 @@ public class PathService {
    * username 上傳者明稱
    * md5 檔案MD5當作唯一路徑
    * uploadType 上傳類型
+   * 範例 ./uploadTmp/123_tony/mp4/8deef08eb240a349df137891c56c4d33
    * */
   public String getPackLocalUploadFilePath(String userId, String username, String md5,
       UploadType uploadType) {
     return localUploadFilePath + "/" + userId + "_" + username + "/" + uploadType.code + "/" + md5;
   }
+
+
+
 
 
 

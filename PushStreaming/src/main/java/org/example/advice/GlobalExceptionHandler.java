@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+
+    /** 上傳檔案
+     * Validation 全局異常返回
+     * */
     @ExceptionHandler(BindException.class)
     public ResponseEntity<BaseResp<?>> handleBindException(BindException ex) {
         BindingResult bindingResult = ex.getBindingResult();

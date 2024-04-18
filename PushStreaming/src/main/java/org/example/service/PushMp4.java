@@ -24,13 +24,7 @@ import static org.example.utils.FileUtil.CheckFilePath;
 public class PushMp4 {
 
     public static void createMp4Push(String Mp4FilePath , String SRSPushAddress) throws Exception {
-
-        boolean b = CheckFilePath(Mp4FilePath);
-        if (b) {
-            grabAndPush(Mp4FilePath, SRSPushAddress);
-        }else {
-            throw new FilePathNotFundException();
-        }
+        grabAndPush(Mp4FilePath, SRSPushAddress);
     }
 
     /**

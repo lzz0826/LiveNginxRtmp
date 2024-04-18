@@ -26,13 +26,14 @@ public class CreatePushRtmpMp4Req {
     @NotNull(message = "userId不能为空")
     private String userId;
 
-    private String mp4Id;
+    @NotNull(message = "username不能为空")
+    private String username;
 
-    private String mp4Url;
+    @NotNull(message = "fileName不能为空")
+    private String fileName;
 
-
-    private String streamName;
-
+    @NotNull(message = "fileMd5不能为空")
+    private String fileMd5;
 
     //自代参数
     private HashMap<String, String> parameters;

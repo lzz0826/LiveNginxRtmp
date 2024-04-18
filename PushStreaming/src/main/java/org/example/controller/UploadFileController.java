@@ -39,7 +39,7 @@ public class UploadFileController {
 
         byte[] fileBytes = file.getBytes();
         String fileMd5 = DigestUtils.md5DigestAsHex(fileBytes);
-        String result = uploadFileService.uploadFile(req.getUserId(),req.getUsername(), fileName, fileMd5, fileBytes, UploadType.File);
+        String result = uploadFileService.uploadFile(req.getUserId(),req.getUsername(), fileName, fileMd5, fileBytes, UploadType.Mp4);
         return BaseResp.ok(result);
     }
 

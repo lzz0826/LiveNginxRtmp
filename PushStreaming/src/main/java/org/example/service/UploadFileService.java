@@ -17,7 +17,7 @@ public class UploadFileService {
     private PathService pathService;
 
 
-    /** 上傳檔案
+    /** 上傳檔案 TODO 尚未紀錄使用者上傳訊息 userId.Md5......
      * */
     public String uploadFile(String userId, String username, String fileName,String fileMd5,byte[] fileBytes ,
                              UploadType uploadType) throws IOException {

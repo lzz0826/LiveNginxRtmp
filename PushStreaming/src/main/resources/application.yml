@@ -7,6 +7,7 @@ server:
 spring:
   servlet:
     multipart:
+      #檔案上大小
       max-file-size: 300MB #大小不超过 300MB
       max-request-size: 350MB #整个请求的大小不超过 350MB。
 

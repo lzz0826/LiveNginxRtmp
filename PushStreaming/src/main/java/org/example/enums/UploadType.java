@@ -6,6 +6,8 @@ public enum UploadType {
 
   Avatar("avatar"),
 
+  Mp4("mp4"),
+
   File("file");
 
   public final String code;
